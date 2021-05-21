@@ -1,0 +1,5 @@
+Host doggy_dogs
+  HostName 54.167.30.209
+  User ubuntu
+  StrictHostKeyChecking no
+  IdentityFile ~/.ssh/holberton
