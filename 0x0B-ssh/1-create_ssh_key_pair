@@ -2,4 +2,4 @@
 # creates RSA key pair
 # name of created pair - holberton
 # key must be protected by the passphrase - betty
-ssh-keygen -b 4096 -f holberton -N betty
+ssh-keygen -b 4096 -N betty -f holberton
