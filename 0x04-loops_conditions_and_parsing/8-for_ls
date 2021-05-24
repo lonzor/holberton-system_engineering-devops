@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# displays content of current dir in a list format.
+# only after the first dash is displayed in the contents
+l=$(ls)
+for i in $l; do
+	echo "$i" | cut -d "-" -f2
+done
