@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# displays FizzBuzz when num is a multiple of 3 and 5
+# displays Fizz when num is a multiple of 3
+# displays Buzz when the number is a multiple of 5
+# otherwise displays the number in a list format
+for n in {1..100}
+do
+	if [ $(( n % 15 )) == "0" ]
+	then
+		echo "FizzBuzz"
+	elif [ $(( n % 3 )) == "0" ]
+	then
+		echo "Fizz"
+	elif [ $(( n % 5 )) == "0" ]
+	then
+		echo "Buzz"
+	else
+		echo $n
+	fi
+done
