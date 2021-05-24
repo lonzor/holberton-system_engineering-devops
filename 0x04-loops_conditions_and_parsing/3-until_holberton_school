@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# displays Holberton School 10x with until loop
+c=1
+until [ $c -gt 10 ]
+do
+	echo "Holberton School"
+	(( c++ ))
+done
