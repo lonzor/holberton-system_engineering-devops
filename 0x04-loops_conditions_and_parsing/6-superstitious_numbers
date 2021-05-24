@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# displays nums 1-20 with bad luck printed for nums 4, 9, and 17
+c=1
+while [ $c -le 20 ]
+do
+	echo $c
+	case $c in
+		4) echo "bad luck from China";;
+		9) echo "bad luck from Japan";;
+		17) echo "bad luck from Italy";;
+	esac
+	(( c++ ))
+done
