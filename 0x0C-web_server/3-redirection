@@ -9,5 +9,5 @@ sudo echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html
 
 s_str="^\tlocation / {"
 r_str="\tlocation /redirect_me {\n\t\treturn 301 \$scheme://https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\n\tlocation / {"
-sed -i "s@${s_str}@${r_str}@" /etc/nginx/sites-available/default
+sudo sed -i "s@${s_str}@${r_str}@" /etc/nginx/sites-available/default
 sudo service nginx restart
