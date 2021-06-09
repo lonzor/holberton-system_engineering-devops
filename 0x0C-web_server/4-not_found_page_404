@@ -11,6 +11,6 @@ sudo touch /var/www/html/error404.html
 sudo echo "Ceci n'cest pas une page" | sudo tee /var/www/html/error404.html
 
 s_str="^\tlocation / {"
-r_str="\tlocation /redirect_me {\n\t\treturn 301 \$scheme://https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\n\tlocation / {"
-sed -i "s@${s_str}@${r_str}@" /etc/nginx/sites-available/default
+r_str="\terror_page 404 /custom_404.html\n\n\tlocation /redirect_me {\n\t\treturn 301 \$scheme://https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\n\tlocation / {"
+sudo sed -i "s@${s_str}@${r_str}@" /etc/nginx/sites-available/default
 sudo service nginx restart
