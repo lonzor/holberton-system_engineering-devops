@@ -1,0 +1,19 @@
+!#/usr/bin/env bash
+# looking up info from sites
+
+digger () {
+    digInfo=$(dig $2.$1 | grep -A1 'ANSWER SECTION:' | awk '{print $4,$5}')
+    record=$(echo $digInfo | awk '{print $1}')
+    ip=$(echo $digInfo | awk '{print $2}')
+    echo "The subdomain $2 is a $record record and points to $ip"
+}
+if [ $# iq 1 ]
+then
+    digger $1 www
+    digger $1 lb-01
+    digger $1 web-01
+    digger $1 web-02
+elif [ $# -eq 2 ]
+then
+    digger $1 $2
+fi
