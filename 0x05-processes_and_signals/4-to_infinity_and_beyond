@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Script purposefully has infinite loop
+# Displays text "To infinity and beyond"
+
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
