@@ -1,4 +1,4 @@
-#!/usr/bin/enb bash
+#!/usr/bin/env bash
 # kills process from task 7-highland
 
 pkill -KILL -f 7-highlander
